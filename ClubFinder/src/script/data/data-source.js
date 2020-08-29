@@ -1,3 +1,5 @@
+import clubs from './clubs.js';
+
 class DataSource {
     static searchClub(keyword) {
         return new Promise((resolve, reject) => {
@@ -7,12 +9,11 @@ class DataSource {
 
             if (filteredClubs.length) {
                 resolve(filteredClubs);
-            }
-            else {
+            } else {
                 reject(`${keyword} is not found`);
             }
         })
 
     }
 }
-
+export default DataSource;
